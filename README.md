@@ -5,7 +5,7 @@
 This is a responsive web application that allows you to conveniently look up and visualize COVID-19 data (updated daily) for over 190 countries. Countries can be bookmarked where they can be easily viewed in the "Bookmarks" tab. The "Resources" tab is where users can share online resources.
 
 ### Built With
-The front-end is built using HTML/CSS with the help of Bootstrap for styling.
+* HTML/CSS
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [PHP](https://www.php.net/)
