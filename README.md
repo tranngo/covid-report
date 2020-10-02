@@ -1,8 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![COVID-19 Report Screenshot](https://user-images.githubusercontent.com/31317867/94897010-a60b2400-0443-11eb-945c-6c32f78fea6c.png)
-]
+![COVID-19 Report Screenshot](https://user-images.githubusercontent.com/31317867/94897010-a60b2400-0443-11eb-945c-6c32f78fea6c.png)
 
 This is a responsive web application that allows you to conveniently look up and visualize COVID-19 data (updated daily) for over 190 countries. Countries can be bookmarked where they can be easily viewed in the "Bookmarks" tab. The "Resources" tab is where users can share online resources.
 
