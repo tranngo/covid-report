@@ -6,21 +6,16 @@ This is a responsive web application that allows you to conveniently look up and
 
 ### Built With
 * HTML/CSS
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Bootstrap](https://getbootstrap.com/)
+* [JQuery](https://jquery.com/)
 * [PHP](https://www.php.net/)
 * [MySQL](https://www.mysql.com/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* MySQLWorkbench
+* [MySQLWorkbench](https://www.mysql.com/products/workbench/)
 
 ### Installation
 
