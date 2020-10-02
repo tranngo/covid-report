@@ -43,6 +43,7 @@ define("DB_NAME", "ENTER DB_NAME HERE");
 
 ### Bookmarks
 ![image](https://user-images.githubusercontent.com/31317867/94899803-c7bada00-0448-11eb-9665-02f26e80f0a7.png)
+![image](https://user-images.githubusercontent.com/31317867/94904803-bc6bac80-0450-11eb-83b5-5f05fc4b7619.png)
 
 </p>
 </details>
