@@ -1,5 +1,4 @@
-<!-- ABOUT THE PROJECT -->
-## About The Project
+## COVID-19 Report
 
 ![COVID-19 Report Screenshot](https://user-images.githubusercontent.com/31317867/94897010-a60b2400-0443-11eb-945c-6c32f78fea6c.png)
 
@@ -26,14 +25,15 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 1. Clone the repo
-2. Load the MySQL schema in MySQLWorkbench
-4. Enter your database credentials for PHP in `config/config.php`
+2. Load the database in MySQLWorkbench using the provided schema
+3. Enter your database credentials for PHP in `config/config.php`
 ```JS
 define("DB_HOST", "ENTER DB_HOST HERE");
 define("DB_USER", "ENTER DB_USER HERE");
 define("DB_PASS", "ENTER DB_PASS HERE");
 define("DB_NAME", "ENTER DB_NAME HERE");
 ```
+4. Open index.html in your web browser
 
 
 <!-- LICENSE -->
