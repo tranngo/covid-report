@@ -35,7 +35,10 @@ define("DB_NAME", "ENTER DB_NAME HERE");
 ```
 4. Open index.html in your web browser
 
-### Screenshots
+## Screenshots
+
+<details><summary>Show/Hide</summary>
+<p>
 
 Home
 ![image](https://user-images.githubusercontent.com/31317867/94899433-2764b580-0448-11eb-9dfa-0c6b80413af1.png)
@@ -46,6 +49,8 @@ Resources
 Bookmarks
 ![image](https://user-images.githubusercontent.com/31317867/94899803-c7bada00-0448-11eb-9665-02f26e80f0a7.png)
 
+</p>
+</details>
 
 
 <!-- LICENSE -->
