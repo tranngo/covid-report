@@ -1,0 +1,134 @@
+body {
+	color: #E1E1E1;
+	background-color: #000000;
+	font-family: 'Karla', sans-serif;
+}
+
+#header {
+	margin-top: 15px;
+}
+
+.card {
+	background-color: #1E1E1E;
+}
+
+.card .card-title {
+	color: #A5A5A5;
+	margin-bottom: 3px;
+}
+
+#confirmed, #recovered, #deaths {
+	font-size: 2rem;
+}
+
+#country {
+	color: #E1E1E1;
+	background-color: #1E1E1E;
+	border-style: none;
+}
+
+.nav .nav-item .nav-link {
+	/*color: #BB86FC;*/
+	color: #E1E1E1;
+}
+
+.nav .nav-item .active {
+	font-weight: 700;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+#footer #heart {
+	color: red;
+}
+
+#daily-table {
+	color: #E1E1E1;
+}
+
+#global-distribution-card {
+	min-height: 350px;
+}
+
+#global-statistics-card {
+	height: 350px;
+}
+
+#global-statistics-table {
+	margin-top: 10px;
+	height: 265px;
+}
+
+#country-search, #sort-by {
+	border: none;
+	color: #E1E1E1;
+	background-color: #2D2D2D;
+}
+
+#sort-by option:first-child {
+	color: pink;
+}
+
+.bookmark-btn {
+	color: #E1E1E1;
+	background-color: #2D2D2D;
+}
+
+.bookmark-btn:hover {
+	color: #E1E1E1;
+}
+
+.bookmark-icon {
+	color: #FFCD57
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+input:-webkit-autofill {
+-webkit-box-shadow:0 0 0 50px #ffffff inset;
+}
+
+#no-bookmarks-msg {
+	display: none;
+	margin-top: 10px;
+	margin-bottom: 390px;
+}
+
+#tooltip {
+	margin-bottom: 0;
+}
+
+#share-buttons {
+	margin-top: 15px;
+}
+
+#resources .card-text {
+	max-height: 150px;
+	min-height: 150px;
+}
+
+#health, #community, #financial {
+	max-height: 450px;
+	min-height: 298px;
+	background-color: #1E1E1E;
+	padding-top: 18px;
+}
+
+#health .card, #community .card, #financial .card {
+	background-color: #2D2D2D;
+}
+
+.delete:hover {
+	cursor: pointer;
+	text-decoration: underline !important;
+}
+
+#organizationsList {
+	max-height: 450px;
+}

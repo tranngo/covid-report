@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<title>COVID-19 Report</title>
+
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<script src="https://kit.fontawesome.com/2b38a0d5c8.js" crossorigin="anonymous"></script>
+    	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-dark justify-content-center">
+  						<a class="navbar-brand" href="index.html">
+    						<h1><i class="fas fa-shield-virus fa-lg"></i> COVID-19 Report</h1>
+  						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="nav">
+			<div class="row">
+				<div class="col-12">
+					<ul class="nav justify-content-center">
+						<li class="nav-item">
+					    	<a class="nav-link active" href="index.html">Home</a>
+					  	</li>
+					  	<li class="nav-item">
+					    	<a class="nav-link" href="resources.php">Resources</a>
+					  	</li>
+					  	<li class="nav-item">
+					    	<a class="nav-link" href="bookmarks.html">Bookmarks</a>
+					  	</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="statistics">
+			<div class="row my-3">
+				<div class="col-3 col-lg-3">
+				</div>
+				<div class="col-6 col-lg-3 mx-auto text-center">
+					<select id="country" class="form-control">
+        				<option value="Global" selected>Global</option>
+       					<option disabled>---------------------</option>
+      				</select>
+				</div>
+				<div class="col-3 col-lg-3 text-left">
+					<div class="form-check">
+					  	Last updated: <span id="last-updated">N/A</span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-4 my-1">
+					<div class="card">
+						<div class="card-body">
+					    	<p class="card-title">Confirmed</p>
+					    	<p class="card-text" id="confirmed"></p>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 my-1">
+					<div class="card">
+						<div class="card-body">
+					    	<p class="card-title">Recovered</p>
+					    	<p class="card-text" id="recovered"></p>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 my-1">
+					<div class="card">
+						<div class="card-body">
+					    	<p class="card-title">Deaths</p>
+					    	<p class="card-text" id="deaths"></p>
+					  	</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<canvas id="lineChart" width="400" height="150"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mt-4 mb-2">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+					<h3>Global Distribution</h3>
+					<div class="card my-2" id="global-distribution-card">
+						<div class="card-body">
+							<div class="d-none d-lg-block d-xl-none mt-4"></div>
+							<canvas id="pieChart" width="100" height="100"></canvas>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-8">
+					<h3>Daily Statistics</h3>
+					<div class="card my-2" id="global-statistics-card">
+						<div class="card-body">
+							<div class"container-fluid">
+								<div class="row">
+									<div class="col-8">
+										<input class="form-control mr-sm-2" id="country-search" type="search" placeholder="Search for country..." aria-label="Search">
+									</div>
+									<div class="col-4">
+										<select id="sort-by" class="form-control">
+					        				<option value="Global" disabled selected>Sort By</option>
+					        				<option disabled>---------------------</option>
+					        				<option value="name">Alphabetical</option>
+					        				<option value="confirmed">Total Confirmed Cases</option>
+					        				<option value="deaths">Total Deaths</option>
+					        				<option value="confirmedIncrease">Daily Confirmed Cases</option>
+					        				<option value="deathsIncrease">Daily Deaths</option>
+
+					      				</select>
+									</div>
+								</div>
+								<div class="overflow-auto" id="global-statistics-table">
+									<table class="table table-borderless" id="daily-table">
+									  	<thead>
+									  	</thead>
+								  		<tbody>
+								  			<tr></tr>
+									  	</tbody>
+									</table>
+								</div>
+							</div>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-12 col-lg-6 my-2">
+					<h3>How to Protect Yourself</h3>
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info1.png" class="img-fluid" alt="Sneezing">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">The best way to prevent illness is to avoid being exposed to this virus. The virus is thought to spread mainly from person-to-person (between people who are within about 6 feet with another) through respiratory droplets that are produced when an infected person coughs or sneezes.</p>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+
+					<h3>Take Steps to Protect Others</h3>
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info4.png" class="img-fluid" alt="Sick">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">Stay home if you are sick, except to get medical care.</p>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info5.png" class="img-fluid" alt="Covering mouth when coughing or sneezing">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">Cover coughs and sneezes. Cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow. Throw used tissues in the trash. Immediately wash your hands with soap and water for at least 20 seconds. If soap and water are not readily available, clean your hands with hand sanitizer that contains at least 60% alcohol.</p>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info6.png" class="img-fluid" alt="Disinfection">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">Clean and disinfect frequently touched surfaces daily (including tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks). If surfaces are dirty, clean them using detergent or soap and water prior to disinfection.</p>
+						    		<button type="button" class="btn btn-info" id="disinfection-guide-btn">Complete disinfection guidance</button>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 my-2">
+					<h3>Take Steps to Protect Yourself</h3>
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info2.png" class="img-fluid" alt="Handwashing">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing. If soap and water are not readily available, use hand sanitizer that contains at least 60% alchohol. Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+					
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4 col-lg-3 my-auto text-center">
+						    		<img src="img/info3.png" class="img-fluid" alt="Woman sneezing">
+						    	</div>
+						    	<div class="col-8 col-lg-9 my-auto">
+						    		<p class="card-text">Avoid close contact with people who are sick. Put distance between yourself and other people if the COVID-19 is spreading in your community. This is especially important for people who are at higher risk of getting very sick (older adults and people of any age who have serious underlying medical conditions).</p>
+						    	</div>
+						    </div>
+					  	</div>
+					</div>
+
+					<h3>Share</h3>
+					<div class="card my-2">
+						<div class="card-body">
+							<div class="row">
+						    	<div class="col-12 my-auto">
+						    		<p class="card-text">Share <strong>COVID-19 Report</strong> with your friends and family to ensure that they are up to date with COVID-19 statistics too.</p>
+						    	</div>
+						    	<div class="col-12" id="share-buttons">
+					    			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-19-report.now.sh%2F&amp;src=sdkpreparse" class="btn btn-info" role="button" aria-pressed="true"><i class="fab fa-facebook"></i> Share</a>
+					    			<a target="_blank" href="https://twitter.com/intent/tweet?text=Stay+up+to+date+with+COVID-19+Report&url=https%3A%2F%2Fcovid-19-report.now.sh%2F&hashtags=COVID19,COVID,coronavirus" data-text="Stay up to date with COVID-19 Report" class="btn btn-info" role="button" aria-pressed="true"><i class="fab fa-twitter"></i> Tweet</a>
+					    		</div>
+					    </div>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-12 mt-2 mb-5">
+					<p class="card-text">Crafted with <i class="fas fa-heart" id="heart"></i> by <a href="https://www.tranngo.com/">Tran Ngo</a></p>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    	<script src="js/main.js"></script>
+	</body>
+</html>
