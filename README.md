@@ -22,7 +22,7 @@ COVID-19 Report is a responsive web application that allows you to conveniently 
 1. Clone the repo
 2. Load the database in MySQLWorkbench using the provided schema file
 3. Enter your database credentials for PHP in `config/config.php`
-```JS
+```PHP
 define("DB_HOST", "ENTER DB_HOST HERE");
 define("DB_USER", "ENTER DB_USER HERE");
 define("DB_PASS", "ENTER DB_PASS HERE");
