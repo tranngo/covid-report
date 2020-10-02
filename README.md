@@ -25,7 +25,7 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 1. Clone the repo
-2. Load the database in MySQLWorkbench using the provided schema
+2. Load the database in MySQLWorkbench using the provided schema file
 3. Enter your database credentials for PHP in `config/config.php`
 ```JS
 define("DB_HOST", "ENTER DB_HOST HERE");
