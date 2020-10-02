@@ -40,13 +40,13 @@ define("DB_NAME", "ENTER DB_NAME HERE");
 <details><summary>Show/Hide</summary>
 <p>
 
-###Home
+### Home
 ![image](https://user-images.githubusercontent.com/31317867/94899433-2764b580-0448-11eb-9dfa-0c6b80413af1.png)
 
-###Resources
+### Resources
 ![image](https://user-images.githubusercontent.com/31317867/94899696-980bd200-0448-11eb-86b4-82f37d988d36.png)
 
-###Bookmarks
+### Bookmarks
 ![image](https://user-images.githubusercontent.com/31317867/94899803-c7bada00-0448-11eb-9665-02f26e80f0a7.png)
 
 </p>
